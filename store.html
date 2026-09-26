@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopnest — a simple e-commerce store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <span class="logo">🛍️</span>
+    <div>
+      <h1>Shopnest</h1>
+      <span class="tag">small store, honest prices</span>
+    </div>
+  </div>
+
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search products…">
+  </div>
+
+  <div class="top-actions">
+    <button class="icon-btn" id="authBtn">
+      <span id="authLabel">Login</span>
+    </button>
+    <button class="icon-btn cart-btn" id="cartBtn">
+      🛒 <span class="badge" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<nav class="categories" id="categoryNav"></nav>
+
+<main class="app">
+  <div id="productGrid" class="product-grid"></div>
+</main>
+
+<!-- ---------- Product Detail Modal ---------- -->
+<div class="overlay" id="detailOverlay">
+  <div class="modal" id="detailModal"></div>
+</div>
+
+<!-- ---------- Cart Drawer ---------- -->
+<div class="overlay" id="cartOverlay">
+  <div class="drawer" id="cartDrawer">
+    <div class="drawer-head">
+      <h2>Your cart</h2>
+      <button class="close-btn" id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <b id="cartTotal">$0.00</b>
+      </div>
+      <button class="btn btn-full" id="checkoutBtn">Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- Auth Modal ---------- -->
+<div class="overlay" id="authOverlay">
+  <div class="modal auth-modal" id="authModal"></div>
+</div>
+
+<!-- ---------- Order Confirmation Modal ---------- -->
+<div class="overlay" id="orderOverlay">
+  <div class="modal order-modal" id="orderModal"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
